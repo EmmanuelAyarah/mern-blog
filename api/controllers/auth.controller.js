@@ -13,7 +13,6 @@ export const signup = async (req, res, next) =>{
         email === '' || 
         password === ''){
         next(errorHandler(400, 'All fields are required'));
-
     }
     
     const hashedPassword = bcryptjs.hashSync(password, 10);
